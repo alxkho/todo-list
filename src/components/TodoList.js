@@ -2,11 +2,11 @@ import react from "react";
 import Todo from "./Todo";
 
 const TodoList = (props) => {
-  const { todos } = props;
+  const { todos, setTodos, filteredTodos } = props;
   return (
     <div className="todo-comtainer">
       <ul className="todo-list">
-        {todos.map(todo => <Todo text={todo.text} />)}
+        {filteredTodos.map(todo => <Todo todo={todo} todos={todos} setTodos={setTodos} key={todo.id}/>)}
       </ul>
     </div>
   );
