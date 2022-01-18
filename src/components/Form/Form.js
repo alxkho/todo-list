@@ -1,4 +1,5 @@
 import react from "react";
+import './Form.css'
 
 const Form = (props) => {
     const {inputText, setInputText, todos, setTodos, setStatus} = props;
@@ -14,9 +15,10 @@ const Form = (props) => {
         setInputText("");
     }
 
-    const setStatusHandler = (e) => {
-        setStatus(e.target.value);
-    }
+    // const setStatusHandler = (e) => {
+    //     console.log(e.target.value);
+    //     setStatus(e.target.value);
+    // }
 
     return (
         <form>
@@ -24,13 +26,6 @@ const Form = (props) => {
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square" />
             </button>
-            <div className="select">
-                <select name="todos" className="filter-todo" onChange={setStatusHandler}>
-                    <option value="all">All</option> 
-                    <option value="completed">Completed</option> 
-                    <option value="uncompleted">Uncompleted</option> 
-                </select>
-            </div>
         </form>
     );
 }

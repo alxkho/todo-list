@@ -1,7 +1,8 @@
 import react, { useEffect, useState } from 'react';
 import './App.css';
-import Form from './components/Form';
-import TodoList from './components/TodoList';
+import Footer from './components/Footer/Footer';
+import Form from './components/Form/Form';
+import TodoList from './components/TodoList/TodoList';
 
 function App() {
   const [inputText, setInputText] = useState('')
@@ -53,6 +54,7 @@ function App() {
       </header>
       <Form todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus}/>
       <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}/>
+      <Footer todos={todos} setStatus={setStatus}/>
     </>
   );
 }
