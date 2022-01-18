@@ -2,12 +2,16 @@ import react from "react";
 import './Footer.css'
 
 const Footer = (props) => {
-    const {todos, setStatus} = props;
+    const {todos, setStatus, setTodos} = props;
 
     const setStatusHandler = (e) => {
         e.preventDefault();
         console.log(e.target.value);
         setStatus(e.target.value);
+    }
+
+    const clearCompleted = () => {
+        setTodos(todos.filter(todo => todo.completed === false))
     }
 
     return (
@@ -18,7 +22,7 @@ const Footer = (props) => {
                 <button className="btn" onClick={setStatusHandler} value='completed'>Completed</button>
                 <button className="btn" onClick={setStatusHandler} value='uncompleted'>Uncompleted</button>
             </span>
-            <button className="btn">Clear completed</button>
+            <button className="btn" onClick={clearCompleted}>Clear completed</button>
         </footer>
     )
 };
