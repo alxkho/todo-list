@@ -25,11 +25,13 @@ const Todo = (props) => {
 
 
     return (
-        <div className="todo">
+        <div className={`todo ${todo.completed ? 'completed' : ""}`}>
             {/* <input type='checkbox' className="check" /> */}
+            {/* <button className={`complete-btn ${todo.completed ? 'checked' : ""} `} onClick={completeHandler}> */}
             <button className="complete-btn" onClick={completeHandler}>
                 <FontAwesomeIcon icon={faCheck} />                </button>
-            <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+            {/* <li className={`todo-item ${todo.completed ? "completed" : ""}`}> */}
+            <li className='todo-item'>
                 {todo.text}
             </li>
             <button className="trash-btn" onClick={deleteHandler}>

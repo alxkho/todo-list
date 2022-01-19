@@ -16,7 +16,7 @@ const Footer = (props) => {
 
     return (
         <footer className="footer">
-            <span>{todos.filter(todo => todo.completed === false).length} items left</span>
+            <span className="counter">{todos.filter(todo => todo.completed === false).length} items left</span>
             <span className="todo-filter">
                 <button className="btn" onClick={setStatusHandler} value='all'>All</button>
                 <button className="btn" onClick={setStatusHandler} value='completed'>Completed</button>

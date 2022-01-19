@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 body {
@@ -11,47 +11,28 @@ body {
   min-height: 100vh;
 }
 
-.todoapp {
+.todo-app {
   background: #fff;
   top: 150px;
   margin: auto;
   max-width: 80%;
-  
-  align-items: center;
+ 
   position: relative;
 }
 
 header {
   font-size: 2rem;
   color: #a5c8e0;
+  top: -150px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }
 
-header,
-form {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-form input,
-form button {
-  padding: 0.5rem;
-  font-size: 2rem;
+button {
   border: none;
-  background: white;
-}
-
-form button {
-  color: #ff6f47;
-  background: #f7fffe;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-form button:hover {
-  background: #ff6f47;
-  color: white;
+  font-size: 1rem;
+  background: none;
 }
 
 .todo-container {

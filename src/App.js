@@ -48,14 +48,14 @@ function App() {
   }
 
   return (
-    <>
+    <div className='todo-app'>
       <header className='header'>
         <h1>todos</h1>
       </header>
       <Form todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus}/>
       <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}/>
       <Footer todos={todos} setTodos={setTodos} setStatus={setStatus}/>
-    </>
+    </div>
   );
 }
 

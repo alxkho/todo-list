@@ -25,7 +25,7 @@ const Form = (props) => {
 
     return (
         <form>
-            <input value={inputText} onChange={inputTextHandler} type='text' className="todo-input" />
+            <input placeholder="type smth" value={inputText} onChange={inputTextHandler} type='text' className="todo-input" />
             <button onClick={submitTodoHandler} className="submit-btn" type="submit">
                 <FontAwesomeIcon icon={faArrowRight} />
             </button>
