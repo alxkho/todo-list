@@ -14,46 +14,36 @@
 }
 
 .todo-item {
-    padding: 0rem 0.5rem;
-  }
-
-  .fa-trash,
-.fa-check {
-  pointer-events: none;
+  padding: 0rem 0.5rem;
 }
 
-.completed .todo-item{
-    text-decoration: line-through;
-    opacity: 0.5;
-  }
+.completed .todo-item {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
 
 .completed .complete-btn {
-  color: green;
+  color: rgb(10, 169, 10);
+  
 }
 
 .complete-btn,
 .trash-btn {
-  padding: 0.8rem;
+  padding: 0.5rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-right: 10px;
+  color: white;
+
 }
 
 .complete-btn {
   border-radius: 100%;
   border: 1px solid #e6e6e6;
   background: none;
-  color: white;
 }
 
-/* .checked {
-    color: green;
-    text-decoration: line-through;
-    opacity: 0.5;
-} */
-
-.trash-btn {
-  color: red;
+.todo:hover > .trash-btn {
+  color: rgb(226, 104, 73);
 }
 
-/* <li className={`todo-item ${todo.completed ? "completed" : ""}`}> */

@@ -1,6 +1,5 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import react from "react";
 import './Form.css'
 
 
@@ -18,16 +17,11 @@ const Form = (props) => {
         setInputText("");
     }
 
-    // const setStatusHandler = (e) => {
-    //     console.log(e.target.value);
-    //     setStatus(e.target.value);
-    // }
-
     return (
         <form>
-            <input placeholder="type smth" value={inputText} onChange={inputTextHandler} type='text' className="todo-input" />
+            <input placeholder="What needs to be done?" value={inputText} onChange={inputTextHandler} type='text' className="todo-input" />
             <button onClick={submitTodoHandler} className="submit-btn" type="submit">
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon icon={faArrowRightLong} />
             </button>
         </form>
     );

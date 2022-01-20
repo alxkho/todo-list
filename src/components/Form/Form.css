@@ -18,10 +18,5 @@
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 2rem;
-    opacity: 30%;
+    opacity: 20%;
 }
-
-/* .submit-btn:hover {
-    background: #ff6f47;
-    color: white;
-  } */

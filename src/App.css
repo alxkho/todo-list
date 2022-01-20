@@ -5,7 +5,7 @@
 }
 
 body {
-  background: rgb(189, 217, 226);
+  background: rgb(216, 235, 241);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -16,14 +16,14 @@ body {
   top: 150px;
   margin: auto;
   max-width: 80%;
- 
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 0px 50px 0 rgb(0 0 0 / 10%);
   position: relative;
 }
 
 header {
   font-size: 2rem;
   color: #a5c8e0;
-  top: -150px;
+  top: -100px;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -45,7 +45,3 @@ button {
   min-width: 30%;
   list-style: none;
 }
-
-
-
-

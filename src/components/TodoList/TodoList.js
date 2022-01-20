@@ -1,4 +1,3 @@
-import react from "react";
 import Todo from "../Todo/Todo";
 
 const TodoList = (props) => {
