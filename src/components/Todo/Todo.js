@@ -1,7 +1,8 @@
-import './Todo.css'
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { useState } from 'react/cjs/react.development';
+import './Todo.css'
+
 
 const Todo = (props) => {
     const { todo, todos, setTodos } = props;
