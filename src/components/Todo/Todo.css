@@ -19,7 +19,7 @@
 
 .completed .todo-item {
   text-decoration: line-through;
-  opacity: 0.5;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .completed .complete-btn {

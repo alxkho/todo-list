@@ -2,7 +2,11 @@
     display: flex;
     justify-content: space-evenly;
     padding: 0 30px;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
 
+    position: sticky;
+    top: 0;
 }
 
 .todo-input {
