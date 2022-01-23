@@ -36,6 +36,15 @@ const Todo = (props) => {
             }
             return item;
         }));
+        setCanEdit(false)
+    }
+
+    const keyDownHandler = (e) => {
+        if (e.key === 'Escape') {
+            setCanEdit(false);
+        } else if (e.key === 'Enter') {
+            editHandler(e)
+        }
     }
 
 
@@ -45,7 +54,7 @@ const Todo = (props) => {
                 <FontAwesomeIcon icon={faCheck} />                </button>
             <li className='todo-item' onDoubleClick={() => setCanEdit(true)}>
                 {canEdit ?
-                    <input defaultValue={todo.text} onChange={editHandler} />
+                    <input className="edit-input" autoFocus defaultValue={todo.text} onBlur={editHandler} onKeyDown={keyDownHandler} />
                     : todo.text}
             </li>
             <button className="trash-btn" onClick={deleteHandler}>

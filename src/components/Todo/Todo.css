@@ -39,7 +39,7 @@
 
 .complete-btn {
   border-radius: 100%;
-  border: 1px solid #e6e6e6;
+  outline: 1px solid #e6e6e6;
   background: none;
 }
 
@@ -47,3 +47,8 @@
   color: rgb(226, 104, 73);
 }
 
+.edit-input {
+  height: 40px;
+  width: 100%;
+  font-size: 1.5rem;
+}
