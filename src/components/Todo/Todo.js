@@ -52,7 +52,7 @@ const Todo = (props) => {
         <div className={`todo ${todo.completed ? 'completed' : ""}`}>
             <button className="complete-btn" onClick={completeHandler}>
                 <FontAwesomeIcon icon={faCheck} />                </button>
-            <li className='todo-item' onDoubleClick={() => setCanEdit(true)}>
+            <li className='todo-item' title={todo.text} onDoubleClick={() => setCanEdit(true)}>
                 {canEdit ?
                     <input className="edit-input" autoFocus defaultValue={todo.text} onBlur={editHandler} onKeyDown={keyDownHandler} />
                     : todo.text}
