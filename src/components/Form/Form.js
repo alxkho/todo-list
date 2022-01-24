@@ -19,7 +19,7 @@ const Form = (props) => {
 
     return (
         <form>
-            <input placeholder="What needs to be done?" value={inputText} onChange={inputTextHandler} type='text' className="todo-input" />
+            <input placeholder="What needs to be done?" autoFocus value={inputText} onChange={inputTextHandler} type='text' className="todo-input" />
             <button onClick={submitTodoHandler} className="submit-btn" type="submit">
                 <FontAwesomeIcon icon={faArrowRightLong} />
             </button>
