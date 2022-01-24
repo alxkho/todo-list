@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import './Todo.css'
+import { Draggable } from "react-beautiful-dnd";
 
 
 const Todo = (props) => {
-    const { todo, todos, setTodos } = props;
+    const { todo, todos, setTodos, index } = props;
 
     const [canEdit, setCanEdit] = useState(false)
 
@@ -49,18 +50,28 @@ const Todo = (props) => {
 
 
     return (
-        <div className={`todo ${todo.completed ? 'completed' : ""}`}>
-            <button className="complete-btn" onClick={completeHandler}>
-                <FontAwesomeIcon icon={faCheck} />                </button>
-            <li className='todo-item' title={todo.text} onDoubleClick={() => setCanEdit(true)}>
-                {canEdit ?
-                    <input className="edit-input" autoFocus defaultValue={todo.text} onBlur={editHandler} onKeyDown={keyDownHandler} />
-                    : todo.text}
-            </li>
-            <button className="trash-btn" onClick={deleteHandler}>
-                <FontAwesomeIcon icon={faTrashCan} />
-            </button>
-        </div>
+        <Draggable draggableId={`${todo.id}`} index={index}>
+            {(provided, snapshot) => (
+                <div
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                >
+                    <div className={`todo ${todo.completed ? 'completed' : ""}`}>
+                        <button className="complete-btn" onClick={completeHandler}>
+                            <FontAwesomeIcon icon={faCheck} />                </button>
+                        <li className='todo-item' title={todo.text} onDoubleClick={() => setCanEdit(true)}>
+                            {canEdit ?
+                                <input className="edit-input" autoFocus defaultValue={todo.text} onBlur={editHandler} onKeyDown={keyDownHandler} />
+                                : todo.text}
+                        </li>
+                        <button className="trash-btn" onClick={deleteHandler}>
+                            <FontAwesomeIcon icon={faTrashCan} />
+                        </button>
+                    </div>
+                </div>)}
+        </Draggable>
+
     );
 }
 
