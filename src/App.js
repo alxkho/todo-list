@@ -1,5 +1,6 @@
 import react, { useEffect, useState } from 'react';
 import './App.css';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import Footer from './components/Footer/Footer';
 import Form from './components/Form/Form';
 import TodoList from './components/TodoList/TodoList';
@@ -20,7 +21,7 @@ function App() {
   }, [todos, status])
 
   const filterHandler = () => {
-    switch(status) {
+    switch (status) {
       case 'completed':
         setFilteredTodos(todos.filter(todo => todo.completed === true))
         break;
@@ -34,12 +35,12 @@ function App() {
   }
 
   const saveLocalTodos = () => {
-      localStorage.setItem('todos', JSON.stringify(todos))
-  
+    localStorage.setItem('todos', JSON.stringify(todos))
+
   };
 
   const getLocalTodos = () => {
-    if(localStorage.getItem('todos') === null) {
+    if (localStorage.getItem('todos') === null) {
       localStorage.setItem('todos', JSON.stringify([]))
     } else {
       let todoLocal = JSON.parse(localStorage.getItem('todos'))
@@ -52,9 +53,11 @@ function App() {
       <header className='header'>
         <h1>todos</h1>
       </header>
-      <Form todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus}/>
-      <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}/>
-      <Footer todos={todos} setTodos={setTodos} setStatus={setStatus}/>
+      <ErrorBoundary>
+        <Form todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} setStatus={setStatus} />
+        <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos} />
+        <Footer todos={todos} setTodos={setTodos} setStatus={setStatus} />
+      </ErrorBoundary>
     </div>
   );
 }
