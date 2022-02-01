@@ -1,5 +1,6 @@
 import Todo from "../Todo/Todo";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import Particles from "../Particles/Particles";
 
 const TodoList = (props) => {
   const { todos, setTodos, filteredTodos } = props;
@@ -30,8 +31,8 @@ const TodoList = (props) => {
   }
 
   return (
-
     <DragDropContext className="todo-comtainer" onDragEnd={onDragEnd}>
+      <Particles type="completed" />
       <ul className="todo-list">
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
