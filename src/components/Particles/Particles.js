@@ -4,33 +4,11 @@ const MyParticles = ({ type }) => {
 
     const particlesOptions = {
         completed: {
-            "autoPlay": true,
-            "background": {
-                "color": {
-                    "value": ""
-                },
-                "image": "",
-                "position": "",
-                "repeat": "",
-                "size": "",
-                "opacity": 1
-            },
-            "backgroundMask": {
-                "composite": "destination-out",
-                "cover": {
-                    "color": {
-                        "value": "#fff"
-                    },
-                    "opacity": 1
-                },
-                "enable": false
-            },
+            "autoPlay": false,
             "fullScreen": {
                 "enable": true,
                 "zIndex": -1
             },
-            "detectRetina": true,
-            "duration": 0,
             "fpsLimit": 60,
             "interactivity": {
                 "detectsOn": "window",
@@ -134,7 +112,6 @@ const MyParticles = ({ type }) => {
                     }
                 }
             },
-            "manualParticles": [],
             "motion": {
                 "disable": false,
                 "reduce": {
@@ -143,46 +120,7 @@ const MyParticles = ({ type }) => {
                 }
             },
             "particles": {
-                "bounce": {
-                    "horizontal": {
-                        "random": {
-                            "enable": false,
-                            "minimumValue": 0.1
-                        },
-                        "value": 0
-                    },
-                    "vertical": {
-                        "random": {
-                            "enable": false,
-                            "minimumValue": 0.1
-                        },
-                        "value": 0
-                    }
-                },
-                "collisions": {
-                    "bounce": {
-                        "horizontal": {
-                            "random": {
-                                "enable": false,
-                                "minimumValue": 0.1
-                            },
-                            "value": 1
-                        },
-                        "vertical": {
-                            "random": {
-                                "enable": false,
-                                "minimumValue": 0.1
-                            },
-                            "value": 1
-                        }
-                    },
-                    "enable": false,
-                    "mode": "bounce",
-                    "overlap": {
-                        "enable": true,
-                        "retries": 0
-                    }
-                },
+                
                 "color": {
                     "value": [
                         "#1E00FF",
@@ -190,99 +128,11 @@ const MyParticles = ({ type }) => {
                         "#E1FF00",
                         "#00FF9E"
                     ],
-                    "animation": {
-                        "h": {
-                            "count": 0,
-                            "enable": true,
-                            "offset": 0,
-                            "speed": 30,
-                            "sync": true
-                        },
-                        "s": {
-                            "count": 0,
-                            "enable": false,
-                            "offset": 0,
-                            "speed": 1,
-                            "sync": true
-                        },
-                        "l": {
-                            "count": 0,
-                            "enable": false,
-                            "offset": 0,
-                            "speed": 1,
-                            "sync": true
-                        }
-                    }
+                   
                 },
-                "destroy": {
-                    "mode": "none",
-                    "split": {
-                        "count": 1,
-                        "factor": {
-                            "random": {
-                                "enable": false,
-                                "minimumValue": 0
-                            },
-                            "value": 3
-                        },
-                        "rate": {
-                            "random": {
-                                "enable": false,
-                                "minimumValue": 0
-                            },
-                            "value": {
-                                "min": 4,
-                                "max": 9
-                            }
-                        },
-                        "sizeOffset": true
-                    }
-                },
-                "gradient": [],
-                "groups": {},
-                "life": {
-                    "count": 0,
-                    "delay": {
-                        "random": {
-                            "enable": false,
-                            "minimumValue": 0
-                        },
-                        "value": 0,
-                        "sync": false
-                    },
-                    "duration": {
-                        "random": {
-                            "enable": false,
-                            "minimumValue": 0.0001
-                        },
-                        "value": 0,
-                        "sync": false
-                    }
-                },
-                "links": {
-                    "blink": false,
-                    "color": {
-                        "value": "#fff"
-                    },
-                    "consent": false,
-                    "distance": 100,
-                    "enable": false,
-                    "frequency": 1,
-                    "opacity": 1,
-                    "shadow": {
-                        "blur": 5,
-                        "color": {
-                            "value": "#00ff00"
-                        },
-                        "enable": false
-                    },
-                    "triangles": {
-                        "enable": false,
-                        "frequency": 1
-                    },
-                    "width": 1,
-                    "warp": false
-                },
+
+               
+                
                 "move": {
                     "angle": {
                         "offset": 0,
@@ -356,52 +206,9 @@ const MyParticles = ({ type }) => {
                     "limit": 300,
                     "value": 0
                 },
-                "opacity": {
-                    "random": {
-                        "enable": false,
-                        "minimumValue": 0.1
-                    },
-                    "value": 1,
-                    "animation": {
-                        "count": 0,
-                        "enable": false,
-                        "speed": 0.3,
-                        "sync": true,
-                        "destroy": "min",
-                        "startValue": "max"
-                    }
-                },
-                "orbit": {
-                    "animation": {
-                        "count": 0,
-                        "enable": false,
-                        "speed": 1,
-                        "sync": false
-                    },
-                    "enable": false,
-                    "opacity": 1,
-                    "rotation": {
-                        "random": {
-                            "enable": false,
-                            "minimumValue": 0
-                        },
-                        "value": 45
-                    },
-                    "width": 1
-                },
-                "reduceDuplicates": false,
-                "repulse": {
-                    "random": {
-                        "enable": false,
-                        "minimumValue": 0
-                    },
-                    "value": 0,
-                    "enabled": false,
-                    "distance": 1,
-                    "duration": 1,
-                    "factor": 1,
-                    "speed": 1
-                },
+                
+               
+               
                 "roll": {
                     "darken": {
                         "enable": true,
@@ -418,23 +225,7 @@ const MyParticles = ({ type }) => {
                         "max": 25
                     }
                 },
-                "rotate": {
-                    "random": {
-                        "enable": false,
-                        "minimumValue": 0
-                    },
-                    "value": {
-                        "min": 0,
-                        "max": 360
-                    },
-                    "animation": {
-                        "enable": true,
-                        "speed": 60,
-                        "sync": false
-                    },
-                    "direction": "random",
-                    "path": false
-                },
+                
                 "shadow": {
                     "blur": 0,
                     "color": {
@@ -461,8 +252,7 @@ const MyParticles = ({ type }) => {
                                 "value": [
                                     "💩",
                                     "🤡",
-                                    "🍀",
-                                    "🍙"
+                                    
                                 ]
                             }
                         ]
@@ -478,22 +268,20 @@ const MyParticles = ({ type }) => {
                 },
                 "size": {
                     "random": {
-                        "enable": false,
-                        "minimumValue": 1
+                        "enable": true,
+                        "minimumValue": 5
                     },
                     "value": 3,
                     "animation": {
-                        "count": 0,
-                        "enable": false,
+                        "count": 10,
+                        "enable": true,
                         "speed": 5,
                         "sync": false,
                         "destroy": "none",
                         "startValue": "random"
                     }
                 },
-                "stroke": {
-                    "width": 0
-                },
+               
                 "tilt": {
                     "random": {
                         "enable": false,
@@ -513,12 +301,12 @@ const MyParticles = ({ type }) => {
                 },
                 "twinkle": {
                     "lines": {
-                        "enable": false,
+                        "enable": true,
                         "frequency": 0.05,
                         "opacity": 1
                     },
                     "particles": {
-                        "enable": false,
+                        "enable": true,
                         "frequency": 0.05,
                         "opacity": 1
                     }
@@ -571,13 +359,13 @@ const MyParticles = ({ type }) => {
 
     }
     const particlesInit = (main) => {
-        console.log(main);
+        // console.log(main);
 
         // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
     };
 
     const particlesLoaded = (container) => {
-        console.log(container);
+        // console.log(container);
     };
     return (
         <Particles
