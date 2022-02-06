@@ -8,12 +8,12 @@
   background: #fff;
   position: sticky;
   bottom: 0;
+  text-align: center;
+  align-items: center;
 }
-
 
 .footer .btn,
 .counter {
-  background: none;
   padding: 10px;
   color: #777;
 }
@@ -21,12 +21,11 @@
 .footer .btn:active,
 .footer .btn:focus,
 .footer .btn:hover {
-  padding: 9px;
-  border: 1px solid #a5c8e0;
+  outline: 1px solid #a5c8e0;
   border-radius: 5px;
 }
 
-.footer .todo-filter btn {
+.todo-filter .btn {
   margin: 0 10px;
 }
 
@@ -43,4 +42,29 @@ footer:before {
   box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #f6f6f6,
     0 9px 1px -3px rgb(0 0 0 / 20%), 0 16px 0 -6px #f6f6f6,
     0 17px 2px -6px rgb(0 0 0 / 20%);
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    font-size: 16px;
+  }
+
+  .footer .btn {
+    padding: 5px;
+  }
+
+  .todo-filter .btn {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    height: auto;
+  }
+
+  .todo-filter {
+    display: flex;
+    flex-direction: column;
+  }
 }
