@@ -28,7 +28,6 @@
 
 .completed .complete-btn {
   color: rgb(10, 169, 10);
-  
 }
 
 .complete-btn,
@@ -37,6 +36,10 @@
   cursor: pointer;
   font-size: 1.5rem;
   margin-right: 10px;
+  color: #fff;
+}
+
+.trash-btn {
   display: none;
 }
 
