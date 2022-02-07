@@ -16,6 +16,7 @@
 .counter {
   padding: 10px;
   color: #777;
+  font-size: 0.7em;
 }
 
 .footer .btn:active,
@@ -23,6 +24,12 @@
 .footer .btn:hover {
   outline: 1px solid #a5c8e0;
   border-radius: 5px;
+}
+
+.todo-filter {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .todo-filter .btn {
@@ -45,12 +52,12 @@ footer:before {
 }
 
 @media screen and (max-width: 800px) {
-  .footer {
-    font-size: 16px;
-  }
-
   .footer .btn {
     padding: 5px;
+  }
+
+  .todo-filter {
+    justify-content: center;
   }
 
   .todo-filter .btn {
@@ -62,9 +69,8 @@ footer:before {
   .footer {
     height: auto;
   }
-
-  .todo-filter {
-    display: flex;
-    flex-direction: column;
+  .footer .btn,
+  .counter {
+    font-size: 0.6em;
   }
 }

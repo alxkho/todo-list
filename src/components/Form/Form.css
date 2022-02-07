@@ -15,10 +15,10 @@
     width: 100%;
     outline: none;
     opacity: 50%;
-    font-size: 1.5rem;
+    text-overflow: ellipsis;
 }
 
-.submit-btn {
+.todo-app .submit-btn {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 2rem;

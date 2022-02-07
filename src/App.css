@@ -12,13 +12,18 @@ body {
 }
 
 .todo-app {
-  background: #fff;
-  top: 150px;
   margin: auto;
-  max-width: 80%;
-  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 0px 50px 0 rgb(0 0 0 / 10%);
   position: relative;
-  font-size: 1.5em;
+  top: 150px;
+  max-width: 80%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 0px 50px 0 rgb(0 0 0 / 10%);
+}
+
+.todo-app,
+.todo-app input,
+.todo-app button {
+  font-size: 1.5rem;
 }
 
 header {
@@ -33,7 +38,6 @@ header {
 
 button {
   border: none;
-  font-size: 1rem;
   background: none;
 }
 
@@ -46,4 +50,17 @@ button {
 .todo-list {
   min-width: 30%;
   list-style: none;
+}
+
+@media screen and (max-width: 500px) {
+  .todo-app,
+  .todo-app input,
+  .todo-app button {
+    font-size: 1.3rem;
+  }
+
+  header {
+    font-size: 2rem;
+    top: -80px;
+  }
 }
