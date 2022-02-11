@@ -11,9 +11,11 @@ const Form = (props) => {
 
     const submitTodoHandler = (e) => {
         e.preventDefault();
-        setTodos([
-            ...todos, { text: inputText, completed: false, id: Math.random() * 1000 } //исправить - формировать уникальные айди 
-        ]);
+        if (inputText.trim()) {
+            setTodos([
+                ...todos, { text: inputText, completed: false, id: Math.random() * 1000 } //исправить - формировать уникальные айди 
+            ]);
+        }
         setInputText("");
     }
 
