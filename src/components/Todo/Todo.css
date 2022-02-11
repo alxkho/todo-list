@@ -1,6 +1,6 @@
 .todo {
   border: 1px solid #e6e6e66b;
-  height: 60px;
+  min-height: 60px;
   color: black;
   display: flex;
   align-items: center;
